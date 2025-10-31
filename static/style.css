@@ -1,0 +1,90 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+  color: #333;
+}
+
+header {
+  background: #ff385c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hotel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+}
+
+.hotel-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.hotel-card:hover {
+  transform: scale(1.03);
+}
+
+.hotel-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.hotel-card h3 {
+  margin: 0.5rem;
+}
+
+.hotel-card p {
+  margin: 0.5rem;
+  color: #666;
+}
+
+.hotel-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hotel-details img {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
+.hotel-info {
+  max-width: 800px;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+button {
+  background-color: #ff385c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #e63552;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: white;
+  margin-top: 2rem;
+}
