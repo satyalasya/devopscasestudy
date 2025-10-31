@@ -1,14 +1,22 @@
-from flask import Flask,render_template, request
-app=Flask(__name__)
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
 @app.route('/')
-def index():
-    return render_template("form.html")
-@app.route('/submit',methods=['POST'])
-def submit():
-    username=request.form.get('username')
-    email=request.form.get('email')
-    year=request.form.get('year')
-    phone=request.form.get('phone')
-    return render_template('result.html',name=username,email=email,year=year,phone=phone)
-if __name__ == "__main__":
-    app.run(host='0.0.0.0',port="5000",debug=True)
+def home():
+    return render_template('index.html')
+
+@app.route('/hotel1')
+def hotel1():
+    return render_template('hotel1.html')
+
+@app.route('/hotel2')
+def hotel2():
+    return render_template('hotel2.html')
+
+@app.route('/hotel3')
+def hotel3():
+    return render_template('hotel3.html')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
