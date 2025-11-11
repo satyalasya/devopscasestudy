@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kubedemoapp-deployment
+  labels:
+    app: kubedemoapp # Consistent top-level label for the application
 spec:
   replicas: 4
   selector:
@@ -10,10 +12,11 @@ spec:
   template:
     metadata:
       labels:
-        app: kubedemoapp
+        app: kubedemoapp # This must match the selector label
     spec:
       containers:
       - name: kubedemoapp
+        # This image name is correct and fully qualified for Docker Hub
         image: satyalasya/sample-repo:kubeimage1
         ports:
           - containerPort: 5000
